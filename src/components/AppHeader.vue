@@ -1,21 +1,24 @@
 <script>
 import AppNavbar from './AppNavbar.vue';
+import AppJumbotron from './AppJumbotron.vue';
 
 export default {
   name: 'AppHeader',
   data() {
     return {};
   },
-  components: { AppNavbar }
+  components: {
+    AppNavbar,
+    AppJumbotron
+  },
+
 }
 </script>
 
 <template>
   <section class="header">
     <AppNavbar />
-    <h1>
-      ciao
-    </h1>
+    <AppJumbotron />
 
   </section>
 </template>

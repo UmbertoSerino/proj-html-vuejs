@@ -2,5 +2,10 @@
 
 @mixin container ($width, $margin) {
     width: 65%;
+    min-width: 1000px;
     margin: 0 auto
+}
+
+@mixin my_min-width($min-width) {
+    min-width: 450px;
 }
