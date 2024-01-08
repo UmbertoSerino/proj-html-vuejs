@@ -1,0 +1,6 @@
+// Container
+
+@mixin my_container ($width, $margin) {
+    width: 60%;
+    margin: 0 auto
+}
