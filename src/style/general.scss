@@ -1,2 +1,6 @@
 @use './partials/mixins' as*;
 @use './partials/variables' as*;
+
+ul {
+    list-style-type: none;
+}
