@@ -34,8 +34,15 @@ export default {
             </div>
 
         </div>
-
     </section>
+    <div>
+        <div class="shop d-flex flex-column justify-content-center">
+            <i class="fa-brands fa-shopware"></i>
+            <i class="fa-solid fa-store"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -64,6 +71,19 @@ section.my_container {
             width: 90%;
             height: 100%;
         }
+    }
+}
+
+div.shop {
+    position: fixed;
+    right: 0;
+    top: 20%;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    i {
+        padding: 1rem .5rem;
     }
 }
 </style>
