@@ -26,5 +26,6 @@ export default {
 
 section.header {
   background-image: url('../assets/img/imagesZip/img-header/background-pattern-wavify.png');
+  background-color: $color-6;
 }
 </style>

@@ -1,5 +1,4 @@
 <script>
-import AppNavTools from './AppNavTools.vue';
 import { store } from '../js/store';
 export default {
     name: 'AppNavbar',
@@ -8,51 +7,49 @@ export default {
             store,
             // creato un array di oggetti da inserire nella navbar, l'array contiene sia la parte name, che sara' visibile al click dell'utente e un items che sara' un array che conterra' tutti i link utili all'utente quando clicca sul name
             navList: [
-                { name: 'Home', items: ['Home-link1', 'Home-link2', 'Home-link3', 'Home-link4'] },
+                { name: 'Home', items: ['HomeLink-1', 'HomeLink-2', 'HomeLink-3', 'HomeLink-4'] },
                 { name: 'Pages', items: ['Page1', 'Page2', 'Page3'] },
                 { name: 'Courses', items: ['Courses1', 'Courses2', 'Courses3'] },
                 { name: 'Features', items: ['Features1', 'Features2', 'Features3', 'Features4'] },
                 { name: 'Blog', items: ['Blog1', 'Blog2', 'Blog3', 'Blog4'] },
                 { name: 'Shop', items: ['Shop1', 'Shop2', 'Shop3', 'Shop4'] },
             ],
-            isToolsActive: false,
+            // creiamo un indice che di base è false, in modo che al click cambi la sua proprieta' in modo da nascondere la finestra dei link
+            activeIndex: false
         };
     },
     methods: {
-        ToolsActive() {
-            const tools = document.querySelector('ul.tools-list')
-            if (this.isToolsActive == false) {
-                tools.classList.add('tools-none')
+        toolsActive(index) {
+            if (this.activeIndex === index) {
+                this.activeIndex = true;
             } else {
-                tools.classList.add('tools-block')
+                this.activeIndex = index;
             }
-            this.isToolsActive = !this.isToolsActive;
-        }
+        },
+
     },
     created() {
 
     },
     // ci creiamo un compoents, AppNavTools, che saranno i nostri tools che saranno visibili quando l'utente clicca sul link
-    components: { AppNavTools }
 }
 </script>
 <template>
     <section class="my_container">
-
         <nav class="d-flex justify-content-between align-items-center">
             <div class="logo-brand">
                 <img src="../assets/img/imagesZip/img-header/dark-logo.png" alt="brand logo">
             </div>
             <div class="d-flex">
-                <ul class="d-flex m-0" @click="ToolsActive()">
+                <ul class="d-flex m-0 ">
                     <!-- creiamo una lista ciclando nell'array navList -->
-                    <li v-for="item in navList" :key="item" class="mx-2">
+                    <li v-for="(item, index) in navList" :key="item" class="link mx-3" @click="toolsActive(index)">
                         {{ item.name }}
-                        <img class="arrow" src="../assets/img/imagesZip/img-header/image (1).png" alt="arrow down icons">
-                        <img class="arrow d-none" src="../assets/img/imagesZip/img-header/image.png" alt="arrow up icons">
+                        <img class="arrow" :class="{ 'arrow-rotate': activeIndex === index }" src="../assets/img/imagesZip/img-header/image (1).png" alt="arrow down icons">
+                        <!-- <img class="arrow arrow-up d-none" src="../assets/img/imagesZip/img-header/image.png" alt="arrow up icons"> -->
                         <!-- inviamo i dati item al component AppNavTools -->
-                        <div>
-                            <ul class="tools-list tools-none" v-if="item.items">
+                        <div class="tool">
+                            <ul class="tools-list tools-none" :class="{ 'tools-block': activeIndex === index }" v-if="item.items && activeIndex === index">
                                 <li v-for="subItem in item.items" :key="subItem">{{ subItem }}
                                 </li>
                             </ul>
@@ -77,6 +74,7 @@ export default {
 
 section.my_container {
     @include container(width, margin);
+    padding: 2rem 0;
 
     nav {
         height: 50px;
@@ -91,17 +89,27 @@ section.my_container {
         }
     }
 
-    li {
+    li.link {
         border-bottom: 1px solid transparent;
+        position: relative;
     }
 
-    li:hover {
+    li.link:hover {
         color: $color-2;
         border-bottom: 1px solid $color-2;
+        cursor: pointer;
     }
 
     ul.tools-list {
         position: absolute;
+        right: 0;
+        background-color: $color-1 ;
+        padding: .5rem 1rem .5rem 1rem;
+
+        li {
+            line-height: 2rem;
+            color: black;
+        }
     }
 
     ul.tools-none {
@@ -110,6 +118,10 @@ section.my_container {
 
     ul.tools-block {
         display: block;
+    }
+
+    img.arrow-rotate {
+        transform: rotate(180deg);
     }
 }
 </style>
