@@ -1,7 +1,6 @@
 <script>
 export default {
     name: 'AppAboutMe'
-
 }
 </script>
 <template lang="">
@@ -35,7 +34,7 @@ export default {
         </div>
     </section>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../../style/partials/mixins' as*;
 @use '../../style/partials/variables' as*;
 

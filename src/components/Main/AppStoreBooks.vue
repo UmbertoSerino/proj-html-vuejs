@@ -9,6 +9,10 @@ export default {
         opportunityList: {
             type: Array,
             required: true
+        },
+        brandPartnersList: {
+            type: Array,
+            required: true
         }
     },
     data() {
@@ -26,6 +30,7 @@ export default {
     <section class="my_wrapper mb-5">
         <div class="row">
             <div class="col-5">
+                <!-- opportunity list -->
                 <h2 class="text-uppercase">Book store online</h2>
                 <p>Be Alpha With Wingman's Book</p>
                 <ul>
@@ -39,31 +44,31 @@ export default {
                     </button>
                 </div>
             </div>
+            <!-- shop books -->
             <div class="col-7 d-flex">
-                <div v-for="book in booksShop" :key="book" class="my_section-books card">
+                <article v-for="book in booksShop" :key="book" class="my_section-books card">
                     <img class="card-img-top" :src="book.img" alt="">
                     <div class="card-body">
                         <h5 class="card-title text-center">{{ book.info }}</h5>
                         <p class="card-text text-center">{{ book.price }}</p>
                     </div>
-                </div>
+                </article>
             </div>
-            <div class="col-2">
-                <img src="" alt="">
+            <div class="col-2" v-for="partner in brandPartnersList" :key="partner">
+                <img :src="partner" alt="">
             </div>
-            <div class="col-2">aaa</div>
 
         </div>
     </section>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../../style/partials/mixins' as*;
 @use '../../style/partials/variables' as*;
 
 section.my_wrapper {
     @include container (width, margin);
 
-    div.my_section-books {
+    article.my_section-books {
         width: calc((100% / 2) - 2rem);
         margin: 1rem;
     }

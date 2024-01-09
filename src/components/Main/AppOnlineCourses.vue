@@ -19,7 +19,7 @@ export default {
 <template >
     <section class="my_wrapper mb-5">
         <div class="d-flex flex-wrap">
-            <div v-for="courses in latestCorses" :key="courses" class="my_section-card card">
+            <article v-for="courses in latestCorses" :key="courses" class="my_section-card card">
                 <img class="card-img-top" :src="courses.img" :alt="`${courses.alt}`">
                 <div class="card-body">
                     <h5 class="card-title">{{ courses.price }}</h5>
@@ -29,7 +29,7 @@ export default {
                         <p class="card-text"><small class="text-muted">{{ courses.students }} students</small></p>
                     </div>
                 </div>
-            </div>
+            </article>
             <div class="w-100 text-center">
                 <button class="started-button">View all courses
                     <i class="fa-solid fa-arrow-right-long"></i>
@@ -38,14 +38,14 @@ export default {
         </div>
     </section>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../../style/partials/mixins' as*;
 @use '../../style/partials/variables' as*;
 
 section.my_wrapper {
     @include container(width, margin);
 
-    div.my_section-card {
+    article.my_section-card {
         width: calc((100% / 3) - 2rem);
         margin: 1rem;
     }

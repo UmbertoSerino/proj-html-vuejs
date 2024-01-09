@@ -30,7 +30,6 @@ export default {
                     <img src="../../assets/img/imagesZip/img-header/home-movation-hero-image.png" alt="">
                 </div>
             </div>
-
         </div>
     </section>
     <div>

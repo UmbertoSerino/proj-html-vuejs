@@ -52,7 +52,7 @@ export default {
                 </ul>
             </div>
             <div class="reference">
-                <!-- qui andranno inserite le icon per l'indirizzamento ai profili social -->
+                <!-- icon per l'indirizzamento ai profili social -->
                 <a href="www.tweeter.com"><i class="fa-brands fa-twitter"></i></a>
                 <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
