@@ -72,6 +72,7 @@ button.started-button {
 
 div.shop {
     position: fixed;
+    z-index: 1;
     right: 0;
     top: 20%;
     background-color: white;
