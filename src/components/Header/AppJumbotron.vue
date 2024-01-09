@@ -1,10 +1,8 @@
 <script>
-import { store } from '../js/store';
 export default {
     name: 'AppJumbotron',
     data() {
         return {
-            store,
         };
     },
     methods: {
@@ -29,7 +27,7 @@ export default {
             </div>
             <div class="col-6">
                 <div class="my_bg-img">
-                    <img src="../assets/img/imagesZip/img-header/home-movation-hero-image.png" alt="">
+                    <img src="../../assets/img/imagesZip/img-header/home-movation-hero-image.png" alt="">
                 </div>
             </div>
 
@@ -46,13 +44,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style/partials/mixins' as*;
-@use '../style/partials/variables' as*;
+@use '../../style/partials/mixins' as*;
+@use '../../style/partials/variables' as*;
 
 
 section.my_container {
     @include container(width, margin);
-    background-image: url('../assets/img/imagesZip/img-header/home-movation-shape-face-300x267.png');
+    background-image: url('../../assets/img/imagesZip/img-header/home-movation-shape-face-300x267.png');
     background-position: right;
     background-position-y: 200px;
     background-size: 550px;

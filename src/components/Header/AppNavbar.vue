@@ -1,18 +1,16 @@
 <script>
-import { store } from '../js/store';
 export default {
     name: 'AppNavbar',
     data() {
         return {
-            store,
             // creato un array di oggetti da inserire nella navbar, l'array contiene sia la parte name, che sara' visibile al click dell'utente e un items che sara' un array che conterra' tutti i link utili all'utente quando clicca sul name
             navList: [
                 { name: 'Home', items: ['HomeLink-1', 'HomeLink-2', 'HomeLink-3', 'HomeLink-4'] },
-                { name: 'Pages', items: ['Page1', 'Page2', 'Page3'] },
-                { name: 'Courses', items: ['Courses1', 'Courses2', 'Courses3'] },
-                { name: 'Features', items: ['Features1', 'Features2', 'Features3', 'Features4'] },
-                { name: 'Blog', items: ['Blog1', 'Blog2', 'Blog3', 'Blog4'] },
-                { name: 'Shop', items: ['Shop1', 'Shop2', 'Shop3', 'Shop4'] },
+                { name: 'Pages', items: ['Page-1', 'Page-2', 'Page-3'] },
+                { name: 'Courses', items: ['Courses-1', 'Courses-2', 'Courses-3'] },
+                { name: 'Features', items: ['Features-1', 'Features-2', 'Features-3', 'Features-4'] },
+                { name: 'Blog', items: ['Blog-1', 'Blog-2', 'Blog-3', 'Blog-4'] },
+                { name: 'Shop', items: ['Shop-1', 'Shop-2', 'Shop-3', 'Shop-4'] },
             ],
             // creiamo un indice che di base è false, in modo che al click cambi la sua proprieta' in modo da nascondere la finestra dei link
             activeIndex: false
@@ -45,7 +43,7 @@ export default {
                     <!-- creiamo una lista ciclando nell'array navList, la freccia di fianco ruota di 180deg ad ogni click -->
                     <li v-for="(item, index) in navList" :key="item" class="link mx-3 fw-bold" @click="toolsActive(index)">
                         {{ item.name }}
-                        <img class="arrow" :class="{ 'arrow-rotate': activeIndex === index }" src="../assets/img/imagesZip/img-header/image (1).png" alt="arrow down icons">
+                        <img class="arrow" :class="{ 'arrow-rotate': activeIndex === index }" src=".././../assets/img/imagesZip/img-header/image (1).png" alt="arrow down icons">
                         <div class="tool">
                             <!-- al click viene aperta una finesta con i link utili, in base all'indice attivo -->
                             <ul class="tools-list tools-none" :class="{ 'tools-block': activeIndex === index }" v-if="item.items && activeIndex === index">
@@ -68,8 +66,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style/partials/mixins' as*;
-@use '../style/partials/variables' as*;
+@use '../../style/partials/mixins' as*;
+@use '../../style/partials/variables' as*;
 
 section.my_container {
     @include container(width, margin);

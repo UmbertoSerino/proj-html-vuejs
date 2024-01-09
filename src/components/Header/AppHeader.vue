@@ -16,19 +16,20 @@ export default {
 </script>
 
 <template>
-  <section class="header">
+  <header>
+
     <AppNavbar />
     <AppJumbotron />
 
-  </section>
+  </header>
 </template>
 
 <style lang="scss" scoped>
-@use '../style/partials/mixins' as*;
-@use '../style/partials/variables' as*;
+@use '../../style/partials/mixins' as*;
+@use '../../style/partials/variables' as*;
 
-section.header {
-  background-image: url('../assets/img/imagesZip/img-header/background-pattern-wavify.png');
+header {
+  background-image: url('../../assets/img/imagesZip/img-header/background-pattern-wavify.png');
   background-color: $color-6;
 }
 </style>
