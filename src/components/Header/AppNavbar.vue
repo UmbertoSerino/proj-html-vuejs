@@ -36,14 +36,14 @@ export default {
     <section class="my_container">
         <nav class="d-flex justify-content-between align-items-center">
             <div class="logo-brand">
-                <img src="../assets/img/imagesZip/img-header/dark-logo.png" alt="brand logo">
+                <img src="../../assets/img/imagesZip/img-header/dark-logo.png" alt="brand logo">
             </div>
             <div class="d-flex">
                 <ul class="d-flex m-0 ">
                     <!-- creiamo una lista ciclando nell'array navList, la freccia di fianco ruota di 180deg ad ogni click -->
                     <li v-for="(item, index) in navList" :key="item" class="link mx-3 fw-bold" @click="toolsActive(index)">
                         {{ item.name }}
-                        <img class="arrow" :class="{ 'arrow-rotate': activeIndex === index }" src=".././../assets/img/imagesZip/img-header/image (1).png" alt="arrow down icons">
+                        <img class="arrow" :class="{ 'arrow-rotate': activeIndex === index }" src="../../assets/img/imagesZip/img-header/image (1).png" alt="arrow down icons">
                         <div class="tool">
                             <!-- al click viene aperta una finesta con i link utili, in base all'indice attivo -->
                             <ul class="tools-list tools-none" :class="{ 'tools-block': activeIndex === index }" v-if="item.items && activeIndex === index">
