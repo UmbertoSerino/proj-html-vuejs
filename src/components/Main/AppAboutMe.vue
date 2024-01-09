@@ -4,13 +4,13 @@ export default {
 }
 </script>
 <template lang="">
-    <section class="my_wrapper">
+    <section class="my_wrapper mb-5">
         <div class="row">
             <div class="col-5">
                 <h1>About me</h1>
                 <p>How to Be an Alpha Male: The 15 Habitats of True Alphas</p>
             </div>
-            <div class="col-7">
+            <div class="col-7 mb-5">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum excepturi culpa eveniet dicta quasi co
                 </p>

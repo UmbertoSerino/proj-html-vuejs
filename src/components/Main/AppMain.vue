@@ -2,7 +2,8 @@
 import AppAboutMe from './AppAboutMe.vue';
 import AppOnlineCourses from './AppOnlineCourses.vue';
 import AppStoreBooks from './AppStoreBooks.vue';
-import AppRealStoies from './AppRealStoies.vue';
+import AppRealStories from './AppRealStories.vue';
+import AppBlogUpdate from './AppBlogUpdate.vue';
 export default {
     name: 'AppMain',
     data() {
@@ -13,7 +14,7 @@ export default {
                 { id: 2, name: 'Satisfaction rate', data: '100%' },
                 { id: 3, name: 'Enrolled Learners', data: '3092+' },
                 { id: 4, name: 'Online Instructors', data: 200 }],
-            // array per gli ultimi corsi disponibili
+            // array per gli ultimi corsi disponibili AppLatestCourses
             latestCorses: [
                 { id: 1, img: "../../../public/img-main-latest-courses/motivation-course-01-480x298.jpg", price: "$30.00", info: "How to be Successful:Create A Growth Mindset For Success", lessons: "3", students: "50" },
 
@@ -26,18 +27,19 @@ export default {
                 { id: 5, img: "../../../public/img-main-latest-courses/motivation-course-05-480x298.jpg", alt: "picture alphaman drinking", price: "$25.99", info: "Body Language Secrets for Entrepreneurs", lessons: "18", students: "50" },
 
                 { id: 6, img: "../../../public/img-main-latest-courses/motivation-course-06-480x298.jpg", alt: "picture alphaman calling", price: "$19.99", info: "Management Skills: The Science od Leadership", lessons: "17", students: "50" }],
-            // array per la lista delle opportunità
+            // array per la lista delle opportunità AppStoreBooks
             opportunityList: [
                 'Help you understand yourself better',
                 'Revealing mature tips',
                 'Give the right advice',
                 'Fascinating examples of alpha man'],
-            // array dei libri da acquistare online
+            // Array dei libri da acquistare online AppStoreBooks
             booksShop: [
                 { id: 1, img: '../../../public/img-main-store-book/product-book-11-400x400.jpg', info: "Alpha man by Maxcoach", info: "Alpha man by Maxcoach", price: "$29.00" },
                 { id: 2, img: '../../../public/img-main-store-book/product-book-10-400x400.jpg', info: "Real man 4.0 by Maxcoach", price: "$39.00" },
             ],
-            // array lista partnes
+            // Array lista partnes AppStoreBooks
+
             brandPartnersList: [
                 '../../../public/img-main-partners/client-logo-05-primary.png',
                 '../../../public/img-main-partners/client-logo-06-primary.png',
@@ -46,7 +48,7 @@ export default {
                 '../../../public/img-main-partners/client-logo-03-primary.png',
                 '../../../public/img-main-partners/client-logo-02-primary.png'
             ],
-            // array testimonials
+            // Array testimonials AppRealStories
             testimonials: [
                 { id: 1, name: 'Mina Hollace', work: 'Freelancer', info: 'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.', img: '../../../public/img-main-real-stories/testimonial-avata-02.jpg' },
 
@@ -55,23 +57,39 @@ export default {
                 { id: 3, name: 'Joseph Onion', work: 'No Work', info: 'No work but i want to be a AlphaMan', img: '../../../public/img-main-real-stories/testimonial-avata-01.jpg' },
 
                 { id: 4, name: 'Mark Landers', work: 'Water Slide Tester', info: 'Water Slide Tester" involves sliding down water slides to assess safety and enjoyment, ensuring water park visitors have a thrilling yet secure experience. It combines fun with responsibility to maintain quality standards', img: '../../../public/img-main-real-stories/testimonial-avata-04.jpg' }
+            ],
+            // Array Articles AppBlogUpdate
+            articlesInteresting: [
+                { id: 1, title: 'How to Stay True to Your Personal Brand', date: 'May 13,2020', info: 'When it comes to tour business or career, you want...', picture: '../../../public/img-main-interesting-articles/motivation-blog-01-480x325.jpg' },
+                { id: 2, title: '5 Vital Lessons in 5 Years of freelancing', date: 'May 13, 2020', info: "Being self-emplayed and working from home, it's easy to get...", picture: '../../../public/img-main-interesting-articles/motivation-blog-03-480x325.jpg' },
+                { id: 3, title: '11 Super Useful Tips for Small-Business Owners', date: 'May 13, 2020', info: 'Being a small-business owner poses a ton of challengs. We...', picture: './../../public/img-main-interesting-articles/motivation-blog-02-480x325.jpg' },
+                { id: 4, title: 'How to Give Tourself Grace to Start Again', date: 'May 13,2020', info: 'Forgive yourself for bad habits you may have started or...', picture: './../../public/img-main-interesting-articles/motivation-blog-04-480x325.jpg' }
             ]
+
         }
     },
     components: {
         AppAboutMe,
         AppOnlineCourses,
         AppStoreBooks,
-        AppRealStoies
+        AppRealStories,
+        AppBlogUpdate
     }
 }
 </script>
 <template>
     <main>
+        <div class="my_wrapper d-flex justify-content-center">
+            <section class="value-course mx-5" v-for="statistic in courseStatistics" :key="statistic">
+                <p class="value-date fs-3 text-center">{{ statistic.data }}</p>
+                <p class="value-info text-uppercase">{{ statistic.name }}</p>
+            </section>
+        </div>
         <AppAboutMe />
         <AppOnlineCourses :latestCorses="latestCorses" />
         <AppStoreBooks :booksShop="booksShop" :opportunityList="opportunityList" :brandPartnersList="brandPartnersList" />
-        <AppRealStoies :testimonials="testimonials" />
+        <AppRealStories :testimonials="testimonials" />
+        <AppBlogUpdate :articlesInteresting="articlesInteresting" />
     </main>
 </template>
 <style lang="scss" scoped>
