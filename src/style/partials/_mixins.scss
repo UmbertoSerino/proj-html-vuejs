@@ -1,4 +1,6 @@
 // Container
+@use './variables' as*;
+
 
 @mixin container ($width, $margin) {
     width: 65%;
@@ -8,4 +10,12 @@
 
 @mixin my_min-width($min-width) {
     min-width: 450px;
+}
+
+@mixin button-green($background-color, $color, $padding ) {
+    background-color: $color-2;
+    color: $color-1;
+    padding: .7rem 2.5rem;
+    border: none;
+    border-radius: 5px;
 }

@@ -56,12 +56,6 @@ section.my_container {
     background-size: 550px;
     background-repeat: no-repeat;
 
-    .started-button {
-        background-color: $color-2;
-        color: $color-1;
-        padding: .7rem 2.5rem;
-    }
-
     .my_bg-img {
 
 
@@ -70,6 +64,10 @@ section.my_container {
             height: 100%;
         }
     }
+}
+
+button.started-button {
+    @include button-green(background-color, color, padding);
 }
 
 div.shop {
