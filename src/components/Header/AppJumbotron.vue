@@ -100,6 +100,11 @@ div.shop {
     i {
         padding: 1rem .5rem;
         color: gray;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+        }
     }
 }
 </style>
