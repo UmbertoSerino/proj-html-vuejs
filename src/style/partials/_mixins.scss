@@ -3,13 +3,17 @@
 
 
 @mixin container ($width, $margin) {
-    width: 65%;
+    width: 62%;
     min-width: 1000px;
     margin: 0 auto
 }
 
 @mixin my_min-width($min-width) {
     min-width: 450px;
+}
+
+@mixin font ($font-family) {
+    font-family: 'Playfair', serif; // Aggiungi la definizione di serif qui
 }
 
 @mixin button-green($background-color, $color, $padding ) {

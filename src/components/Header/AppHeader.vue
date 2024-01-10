@@ -40,6 +40,6 @@ export default {
 
 header {
   background-image: url('../../assets/img/imagesZip/img-header/background-pattern-wavify.png');
-  background-color: $color-6;
+  background-color: $color-5;
 }
 </style>

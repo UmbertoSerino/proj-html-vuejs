@@ -20,9 +20,7 @@ export default {
         }
     },
     methods: {
-        logImagePath(imagePath) {
-            console.log('Percorso dell\'immagine:', imagePath);
-        }
+
     }
 }
 </script>
@@ -46,11 +44,17 @@ export default {
             </div>
             <!-- shop books -->
             <div class="col-7 d-flex">
-                <article v-for="book in booksShop" :key="book" class="my_section-books card">
+                <article v-for="book in booksShop" :key="book" class="my_section-books card position-relative">
                     <img class="card-img-top" :src="book.img" alt="">
                     <div class="card-body">
                         <h5 class="card-title text-center">{{ book.info }}</h5>
                         <p class="card-text text-center">{{ book.price }}</p>
+                    </div>
+                    <div class="nav-shop">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-signal"></i>
                     </div>
                 </article>
             </div>
@@ -71,6 +75,24 @@ section.my_wrapper {
     article.my_section-books {
         width: calc((100% / 2) - 2rem);
         margin: 1rem;
+    }
+
+    .my_section-books:hover .nav-shop {
+        display: flex;
+    }
+
+    div.nav-shop {
+        background-color: $color-1;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        padding: .7rem;
+        display: none;
+
+        i {
+            margin: 1rem 0
+        }
     }
 
     button.started-button {

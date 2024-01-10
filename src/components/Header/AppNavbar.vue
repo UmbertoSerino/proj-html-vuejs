@@ -38,13 +38,13 @@ export default {
             <div class="d-flex">
                 <ul class="d-flex m-0 ">
                     <!-- creiamo una lista ciclando nell'array navList, la freccia di fianco ruota di 180deg ad ogni click -->
-                    <li v-for="(item, index) in navList" :key="item" class="link mx-3 fw-bold" @click="toolsActive(index)">
+                    <li v-for="(item, index) in navList" :key="item" class="link mx-3" @click="toolsActive(index)">
                         {{ item.name }}
-                        <img class="arrow" :class="{ 'arrow-rotate': activeIndex === index }" src="../../assets/img/imagesZip/img-header/image (1).png" alt="arrow down icons">
+                        <i class="arrow fa-solid fa-angle-down"></i>
                         <div class="tool">
                             <!-- al click viene aperta una finesta con i link utili, in base all'indice attivo -->
                             <ul class="tools-list tools-none" :class="{ 'tools-block': activeIndex === index }" v-if="item.items && activeIndex === index">
-                                <li v-for="subItem in item.items" :key="subItem">{{ subItem }}
+                                <li class="sub-item" v-for="subItem in item.items" :key="subItem">{{ subItem }}
                                 </li>
                             </ul>
                         </div>
@@ -53,10 +53,10 @@ export default {
             </div>
             <div class="reference">
                 <!-- icon per l'indirizzamento ai profili social -->
-                <a href="www.tweeter.com"><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/?lang=it"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/?locale=it_IT"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </nav>
     </section>
@@ -72,7 +72,7 @@ section.my_container {
     margin-bottom: 2rem;
 
     nav {
-        height: 50px;
+        height: 60px;
 
         .logo-brand {
             height: 100%;
@@ -84,6 +84,7 @@ section.my_container {
         }
     }
 
+    // Link navbar visibile
     li.link {
         border-bottom: 1px solid transparent;
         position: relative;
@@ -95,16 +96,23 @@ section.my_container {
         cursor: pointer;
     }
 
+    i.arrow {
+        font-size: .7rem;
+    }
+
+    // link navbar popup
     ul.tools-list {
         position: absolute;
         right: 0;
+        top: 30px;
         background-color: $color-1 ;
         padding: .5rem 1rem .5rem 1rem;
+        border-bottom: 2px solid $color-2 ;
+    }
 
-        li {
-            line-height: 2rem;
-            color: black;
-        }
+    li.sub-item {
+        line-height: 2rem;
+        color: black;
     }
 
     ul.tools-none {
@@ -115,15 +123,12 @@ section.my_container {
         display: block;
     }
 
-    img.arrow-rotate {
-        transform: rotate(180deg);
-    }
-
+    // icon right
     div.reference {
         min-width: 120px;
 
         a {
-            margin-right: 1rem;
+            margin-right: 1.3rem;
             color: black;
         }
     }

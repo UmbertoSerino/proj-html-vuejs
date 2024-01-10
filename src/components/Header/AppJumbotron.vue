@@ -17,15 +17,15 @@ export default {
 <template>
     <section class="my_container">
         <div class="row">
-            <div class="col-6 my_min-width">
-                <h1 class="fs-5 text-uppercase">I'm Wigman</h1>
-                <h2>Peace On Earth A Wonderful Wish But No Way</h2>
-                <h3 class="fs-5">Success isn't avernight. It's when everyday you get a little better than the day before. It all adds up</h3>
-                <button class="started-button">Get a Started For Free
+            <div class="col-5 my_min-width py-5">
+                <h1 class="fs-6 text-uppercase mb-4">I'm Wigman</h1>
+                <h2 class="my_playfair">Peace On Earth A Wonderful Wish But No Way</h2>
+                <h3 class="my_font">Success isn't avernight. It's when everyday you get a little better than the day before. It all adds up</h3>
+                <button class="started-button fw-bold my_font">Get a Started For Free
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </button>
             </div>
-            <div class="col-6">
+            <div class="offset-1 col-6">
                 <div class="my_bg-img">
                     <img src="../../assets/img/imagesZip/img-header/home-movation-hero-image.png" alt="">
                 </div>
@@ -51,18 +51,29 @@ section.my_container {
     @include container(width, margin);
     background-image: url('../../assets/img/imagesZip/img-header/home-movation-shape-face-300x267.png');
     background-position: right;
-    background-position-y: 200px;
-    background-size: 550px;
+    background-position-y: 150px;
+    background-size: 450px;
     background-repeat: no-repeat;
+    margin-bottom: 4rem;
 
     .my_bg-img {
 
-
         img {
-            width: 90%;
+            width: 80%;
             height: 100%;
         }
     }
+}
+
+h2.my_playfair {
+    @include font(font-family);
+    font-size: 3.38rem;
+}
+
+h3.my_font {
+    font-size: .9rem;
+    line-height: 1.7rem;
+    margin-bottom: 2rem;
 }
 
 button.started-button {
