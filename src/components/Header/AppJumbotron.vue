@@ -84,8 +84,8 @@ button.started-button {
 }
 
 button:hover {
-    background-color: $color-3;
-    transition: 1s ease-in-out;
+    // background-color: $color-3;
+    // transition: 1s ease-in-out;
 }
 
 div.shop {
