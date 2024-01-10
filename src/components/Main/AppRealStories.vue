@@ -23,48 +23,50 @@ export default {
 }
 </script>
 <template>
-    <section class="my_wrapper-real-stories position-relative">
-        <div class="row">
-            <div class="col-6 my_background">
-                <div class="container-testimonials text-center">
-                    <h1 class="color-2 fs-6 fw-bold mb-5 text-uppercase">real stories</h1>
-                    <p class="testimonial-info">{{ testimonials[activeIndex].info }}</p>
-                    <div class="picture-testimonails">
-                        <img :src="testimonials[activeIndex].img" alt="" />
-                    </div>
-                    <div class="mb-3">
-                        <span class="fs-5">{{ testimonials[activeIndex].name }}</span>
-                    </div>
-                    <div>
-                        <span>/ {{ testimonials[activeIndex].work }}</span>
+    <section class="my_wrapper-real-stories my_background position-relative">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 my_background">
+                    <div class="container-testimonials text-center">
+                        <h1 class="color-2 fs-6 fw-bold mb-5 text-uppercase">real stories</h1>
+                        <p class="testimonial-info">{{ testimonials[activeIndex].info }}</p>
+                        <div class="picture-testimonials">
+                            <img :src="testimonials[activeIndex].img" alt="" />
+                        </div>
+                        <div class="mb-3">
+                            <span class="fs-5">{{ testimonials[activeIndex].name }}</span>
+                        </div>
+                        <div>
+                            <span>/ {{ testimonials[activeIndex].work }}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 p-0">
-                <img class="picture-alphaman" src="../../../public/img-main-real-stories/home-movation-testimonial-image-768x562.jpg" alt="picture alphaman" />
+                <div class="col-md-6 p-0">
+                    <img class="picture-alphaman" src="../../../public/img-main-real-stories/home-movation-testimonial-image-768x562.jpg" alt="picture alphaman" />
+                </div>
             </div>
         </div>
         <div class="carousel-control">
             <div class="text-center p-0 arrow-up" @click="prevTestimonial">
-                <img src=" ../../assets/img/imagesZip/img-header/image.png" alt="arrow-up">
+                <img src="../../assets/img/imagesZip/img-header/image.png" alt="arrow-up">
             </div>
-            <div class=" text-center">
+            <div class="text-center">
                 <span>{{ activeIndex + 1 }}/{{ testimonials.length }}</span>
             </div>
             <div class="text-center arrow-down" @click="nextTestimonial">
                 <img src="../../assets/img/imagesZip/img-header/image (1).png" alt="arrow-down">
             </div>
         </div>
-
     </section>
 </template>
+  
 <style lang="scss" scoped>
 @use '../../style/partials/mixins' as*;
 @use '../../style/partials/variables' as*;
 
 
 section.my_wrapper-real-stories {
-    min-width: 1620px;
+    min-width: 1220px;
     margin-bottom: 8rem;
 }
 
@@ -92,7 +94,7 @@ div.container-testimonials {
         margin-bottom: 3rem
     }
 
-    div.picture-testimonails {
+    div.picture-testimonials {
         width: 90px;
         margin: 0 auto;
         margin-bottom: 2rem;
@@ -102,20 +104,25 @@ div.container-testimonials {
             width: 100%;
         }
     }
+
+}
+
+div.container-alphaman {
+    width: 50%;
+}
+
+img.picture-alphaman {
+    width: 100%;
 }
 
 div.carousel-control {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
     background-color: $color-1;
-}
-
-img.picture-alphaman {
-    width: 100%;
 }
 </style>

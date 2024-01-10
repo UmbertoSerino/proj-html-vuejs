@@ -65,6 +65,8 @@ export default {
         </section>
         <section class="copryright">
             <p class="m-0 py-5 text-center">2020 Maxcoach. All Right Reserved</p>
+            <a class="page-scroll-up">
+                <i class="fa-solid fa-arrow-up"></i> </a>
         </section>
     </footer>
 </template>
@@ -90,6 +92,23 @@ footer {
         font-size: .9rem
     }
 
+    a.page-scroll-up {
+        background-color: $color-2;
+        position: fixed;
+        right: 30px;
+        bottom: 60px;
+        z-index: 1;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        display: block;
+        padding: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 25px;
+        line-height: 60px;
+        cursor: pointer;
+    }
 
     div.reference-footer {
 
