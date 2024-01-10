@@ -23,16 +23,21 @@ export default {
 }
 </script>
 <template>
-    <section class="container-fluid position-relative">
+    <section class="my_wrapper-real-stories position-relative">
         <div class="row">
-            <div class="col-6 my_background text-center">
-                <h1>real stories</h1>
-                <p>{{ testimonials[activeIndex].info }}</p>
-                <div class="picture-testimonails">
-                    <img :src="testimonials[activeIndex].img" alt="" />
-                </div>
-                <div>
-                    <span>{{ testimonials[activeIndex].work }}</span>
+            <div class="col-6 my_background">
+                <div class="container-testimonials text-center">
+                    <h1 class="color-2 fs-6 fw-bold mb-5 text-uppercase">real stories</h1>
+                    <p class="testimonial-info">{{ testimonials[activeIndex].info }}</p>
+                    <div class="picture-testimonails">
+                        <img :src="testimonials[activeIndex].img" alt="" />
+                    </div>
+                    <div class="mb-3">
+                        <span class="fs-5">{{ testimonials[activeIndex].name }}</span>
+                    </div>
+                    <div>
+                        <span>/ {{ testimonials[activeIndex].work }}</span>
+                    </div>
                 </div>
             </div>
             <div class="col-6 p-0">
@@ -57,6 +62,12 @@ export default {
 @use '../../style/partials/mixins' as*;
 @use '../../style/partials/variables' as*;
 
+
+section.my_wrapper-real-stories {
+    min-width: 1620px;
+    margin-bottom: 8rem;
+}
+
 .my_background {
     background-image: url('../../assets/img/imagesZip/background-pattern-wavify.png');
     background-color: $color-6;
@@ -65,23 +76,42 @@ export default {
     align-items: center;
 }
 
+div.container-testimonials {
+    padding-top: 5rem;
+    width: 50%;
+    margin: 0 auto;
+
+    .color-2 {
+        color: $color-2
+    }
+
+    p.testimonial-info {
+        @include font (font-family);
+        font-size: 1.7rem;
+        margin-bottom: 3rem
+    }
+
+    div.picture-testimonails {
+        width: 90px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+}
+
 div.carousel-control {
-    width: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
     background-color: $color-1;
-}
-
-div.picture-testimonails {
-    width: 70px;
-
-    img {
-        border-radius: 50%;
-        width: 100%;
-    }
 }
 
 img.picture-alphaman {

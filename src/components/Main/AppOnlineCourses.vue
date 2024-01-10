@@ -19,7 +19,7 @@ export default {
 <template >
     <section class="my_wrapper mb-5">
         <h1 class="text-uppercase text-center fs-5">Begin your journey at maxcoach</h1>
-        <h2 class="text-center text-courses mb-5">Latest <span class="text-courses"> Online Couses</span>
+        <h2 class="text-center text-courses mb-5">Latest <span class="span-courses"> Online Courses</span>
         </h2>
         <div class="d-flex flex-wrap">
             <article v-for="courses in latestCorses" :key="courses" class="my_section-card">
@@ -58,7 +58,7 @@ section.my_wrapper {
         font-size: 3.3rem;
     }
 
-    span.text-courses {
+    span.span-courses {
         color: $color-2
     }
 

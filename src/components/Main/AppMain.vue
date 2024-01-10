@@ -54,16 +54,16 @@ export default {
 
                 { id: 2, name: 'Karl Hainze', work: 'Calientacamas', info: 'Translated from the Spanish, the "warms bed". These are people who are paid to slip into other people’s beds and make the sheets warm before they decide to go to bed.', img: '../../../public/img-main-real-stories/testimonial-avata-03.jpg' },
 
-                { id: 3, name: 'Joseph Onion', work: 'No Work', info: 'No work but i want to be a AlphaMan', img: '../../../public/img-main-real-stories/testimonial-avata-01.jpg' },
+                { id: 3, name: 'Joseph Onion', work: 'No Work', info: 'No work, but i want to be a AlphaMan', img: '../../../public/img-main-real-stories/testimonial-avata-01.jpg' },
 
-                { id: 4, name: 'Mark Landers', work: 'Water Slide Tester', info: 'Water Slide Tester" involves sliding down water slides to assess safety and enjoyment, ensuring water park visitors have a thrilling yet secure experience. It combines fun with responsibility to maintain quality standards', img: '../../../public/img-main-real-stories/testimonial-avata-04.jpg' }
+                { id: 4, name: 'Mark Landers', work: 'IT Specialist', info: 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.', img: '../../../public/img-main-real-stories/testimonial-avata-04.jpg' }
             ],
             // Array Articles AppBlogUpdate
             articlesInteresting: [
-                { id: 1, title: 'How to Stay True to Your Personal Brand', date: 'May 13,2020', info: 'When it comes to tour business or career, you want...', picture: '../../../public/img-main-interesting-articles/motivation-blog-01-480x325.jpg' },
+                { id: 1, title: 'How to Stay True to Your Personal Brand', date: 'May 13,2020', info: 'When it comes to tour business or career, you want...', picture: '../../../public/img-main-interesting-articles/motivation-blog-04-480x325.jpg' },
                 { id: 2, title: '5 Vital Lessons in 5 Years of freelancing', date: 'May 13, 2020', info: "Being self-emplayed and working from home, it's easy to get...", picture: '../../../public/img-main-interesting-articles/motivation-blog-03-480x325.jpg' },
                 { id: 3, title: '11 Super Useful Tips for Small-Business Owners', date: 'May 13, 2020', info: 'Being a small-business owner poses a ton of challengs. We...', picture: './../../public/img-main-interesting-articles/motivation-blog-02-480x325.jpg' },
-                { id: 4, title: 'How to Give Tourself Grace to Start Again', date: 'May 13,2020', info: 'Forgive yourself for bad habits you may have started or...', picture: './../../public/img-main-interesting-articles/motivation-blog-04-480x325.jpg' }
+                { id: 4, title: 'How to Give Tourself Grace to Start Again', date: 'May 13,2020', info: 'Forgive yourself for bad habits you may have started or...', picture: './../../public/img-main-interesting-articles/motivation-blog-01-480x325.jpg' }
             ]
 
         }
@@ -105,7 +105,7 @@ export default {
 section.my_wrapper {
     @include container (width, margin);
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin-bottom: 8rem;
 
     div.dotted-border {
         width: 50%;
