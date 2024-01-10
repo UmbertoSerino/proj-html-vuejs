@@ -33,7 +33,7 @@ export default {
                     </div>
                 </div>
             </article>
-            <div class="w-100 text-center">
+            <div class="w-100 text-center py-5">
                 <button class="started-button fw-bold px-5">View all courses
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </button>

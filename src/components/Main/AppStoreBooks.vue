@@ -29,11 +29,11 @@ export default {
         <div class="row">
             <div class="col-5">
                 <!-- opportunity list -->
-                <h2 class="text-uppercase">Book store online</h2>
-                <p>Be Alpha With Wingman's Book</p>
-                <ul>
-                    <li v-for="opportunity in opportunityList" :key="opportunity">
-                        {{ opportunity }}
+                <h2 class="text-uppercase fs-6 mb-4">Book store online</h2>
+                <p class="text-section-book">Be Alpha With <span class="color-2">Wingman's Book</span></p>
+                <ul class="mb-5">
+                    <li class="mb-2" v-for="opportunity in opportunityList" :key="opportunity">
+                        <i class="color-2 fa-solid fa-check"></i>  {{ opportunity }}
                     </li>
                 </ul>
                 <div>
@@ -44,21 +44,29 @@ export default {
             </div>
             <!-- shop books -->
             <div class="col-7 d-flex">
-                <article v-for="book in booksShop" :key="book" class="my_section-books card position-relative">
+                <article v-for="book in booksShop" :key="book" class="my_section-books position-relative">
                     <img class="card-img-top" :src="book.img" alt="">
                     <div class="card-body">
-                        <h5 class="card-title text-center">{{ book.info }}</h5>
-                        <p class="card-text text-center">{{ book.price }}</p>
+                        <h5 class="card-title text-center py-3 fs-6 fw-bold">{{ book.info }}</h5>
+                        <p class="card-text text-center color-2 fw-bold fs-4">{{ book.price }}</p>
                     </div>
                     <div class="nav-shop">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-signal"></i>
+                        <div class="container-icon text-center">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="container-icon text-center">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="container-icon text-center">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="container-icon text-center">
+                            <i class="fa-solid fa-signal"></i>
+                        </div>
                     </div>
                 </article>
             </div>
-            <div class="col-2" v-for="partner in brandPartnersList" :key="partner">
+            <div class="col-2 logo-partners" v-for="partner in brandPartnersList" :key="partner">
                 <img :src="partner" alt="">
             </div>
 
@@ -75,24 +83,47 @@ section.my_wrapper {
     article.my_section-books {
         width: calc((100% / 2) - 2rem);
         margin: 1rem;
+        margin-bottom: 11rem
     }
 
     .my_section-books:hover .nav-shop {
         display: flex;
     }
 
+    p.text-section-book {
+        @include font (font-family);
+        font-size: 3rem;
+        line-height: 3.5rem;
+
+    }
+
+    .color-2 {
+        color: $color-2
+    }
+
     div.nav-shop {
-        background-color: $color-1;
         flex-direction: column;
         position: absolute;
-        top: 30px;
-        right: 0;
-        padding: .7rem;
+        top: 50px;
+        right: 30px;
         display: none;
 
-        i {
-            margin: 1rem 0
+        div.container-icon {
+            background-color: $color-1;
+            border-radius: 50%;
+            width: 27px;
+            height: 27px;
+            margin-bottom: .7rem
         }
+
+        i {
+            font-size: .7rem;
+        }
+
+    }
+
+    div.logo-partners {
+        margin-bottom: 6rem
     }
 
     button.started-button {
