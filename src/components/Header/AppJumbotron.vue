@@ -34,9 +34,9 @@ export default {
     </section>
     <div>
         <div class="shop d-flex flex-column justify-content-center">
+            <i class=" fa-solid fa-store"></i>
             <i class="fa-brands fa-shopware"></i>
-            <i class="fa-solid fa-store"></i>
-            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-book"></i>
             <i class="fa-solid fa-cart-shopping"></i>
         </div>
     </div>
@@ -99,6 +99,7 @@ div.shop {
 
     i {
         padding: 1rem .5rem;
+        color: gray;
     }
 }
 </style>

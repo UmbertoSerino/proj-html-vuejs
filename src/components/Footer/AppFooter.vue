@@ -49,7 +49,7 @@ export default {
                 </div>
                 <div class="col-3">
                     <h1 class="fs-5">Information</h1>
-                    <div v-for="info in information " :key="info">
+                    <div v-for="info in information" :key="info">
                         <div>
                             <ul class="p-0">
                                 <li>
@@ -57,7 +57,6 @@ export default {
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
