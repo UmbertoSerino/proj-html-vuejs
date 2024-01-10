@@ -9,7 +9,15 @@ export default {
     },
     data() {
         return {
-
+            activeIndex: 0,
+        }
+    },
+    methods: {
+        nextTestimonial() {
+            this.activeIndex = (this.activeIndex + 1) % this.testimonials.length
+        },
+        prevTestimonial() {
+            this.activeIndex = (this.activeIndex - 1 + this.testimonials.length) % this.testimonials.length;
         }
     },
 }
@@ -22,21 +30,21 @@ export default {
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus id incidunt, iusto perferendis libero, vel alias consequatur exercitationem odit
                     excepturi minus, sequi accusamus vitae officiis. Vel vitae excepturi fugit? </p>
                 <div class="picture-testimonails">
-                    <img src="../../../public/img-main-real-stories/testimonial-avata-02.jpg" alt="">
+                    <img :src="testimonials[activeIndex].img" alt="" />
                 </div>
             </div>
             <div class="col-6 p-0">
-                <img class="picture-alphaman" src="../../assets/img/imagesZip/img-main-real-stories/home-movation-testimonial-image-768x562.jpg" alt="picture alphaman">
+                <img class="picture-alphaman" src="../../../public/img-main-real-stories/home-movation-testimonial-image-768x562.jpg" alt="picture alphaman" />
             </div>
         </div>
         <div class="carousel-control">
-            <div class="text-center p-0">
-                <img src="../../assets/img/imagesZip/img-header/image.png" alt="arrow-up">
+            <div class="text-center p-0 arrow-up">
+                <img src="../../assets/img/imagesZip/img-header/image.png" alt="arrow-up" @click="prevTestimonial">
             </div>
             <div class="text-center">
-                <span>1/4</span>
+                <span></span>
             </div>
-            <div class="text-center">
+            <div class="text-center arrow-down" @click="nextTestimonial">
                 <img src="../../assets/img/imagesZip/img-header/image (1).png" alt="arrow-down">
             </div>
         </div>
