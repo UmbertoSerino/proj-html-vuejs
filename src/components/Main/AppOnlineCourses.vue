@@ -18,7 +18,7 @@ export default {
 </script>
 <template >
     <section class="my_wrapper mb-5">
-        <h1 class="text-uppercase text-center fs-5">Begin your journey at maxcoach</h1>
+        <h1 class="text-uppercase text-center fs-6">Begin your journey at maxcoach</h1>
         <h2 class="text-center text-courses mb-5">Latest <span class="span-courses"> Online Courses</span>
         </h2>
         <div class="d-flex flex-wrap">
@@ -26,10 +26,10 @@ export default {
                 <img class="card-img-top" :src="courses.img" :alt="`${courses.alt}`">
                 <div class="my_container-info-card">
                     <h5 class="card-title">{{ courses.price }}</h5>
-                    <p class="fw-bold fs-5 card-text">{{ courses.info }}</p>
+                    <p class="fw-bold fs-6 card-text">{{ courses.info }}</p>
                     <div class="d-flex">
-                        <p class="card-text pe-2"><small class="text-muted"><i class="pe-2 fa-solid fa-sheet-plastic"></i>{{ courses.lessons }} lessons</small></p>
-                        <p class="card-text"><small class="text-muted"><i class="pe-2 fa-regular fa-user"></i>{{ courses.students }} students</small></p>
+                        <p class="card-text my_card-text pe-2"><small class="text-muted"><i class="pe-2 fa-solid fa-sheet-plastic"></i>{{ courses.lessons }} lessons</small></p>
+                        <p class="card-text my_card-text"><small class="text-muted"><i class="pe-2 fa-regular fa-user"></i>{{ courses.students }} students</small></p>
                     </div>
                 </div>
             </article>
@@ -56,6 +56,10 @@ section.my_wrapper {
     h2.text-courses {
         @include font(font-family);
         font-size: 3.3rem;
+    }
+
+    .my_card-text {
+        font-size: .8rem;
     }
 
     span.span-courses {

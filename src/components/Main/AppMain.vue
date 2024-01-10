@@ -16,17 +16,17 @@ export default {
                 { id: 4, name: 'Online Instructors', data: 200 }],
             // array per gli ultimi corsi disponibili AppLatestCourses
             latestCorses: [
-                { id: 1, img: "../../../public/img-main-latest-courses/motivation-course-01-480x298.jpg", price: "$30.00", info: "How to be Successful:Create A Growth Mindset For Success", lessons: "3", students: "50" },
+                { id: 1, img: "../../../public/img-main-latest-courses/motivation-course-06-480x298.jpg", price: "$30.00", info: "How to be Successful:Create A Growth Mindset For Success", lessons: "3", students: "50" },
 
-                { id: 2, img: "../../../public/img-main-latest-courses/motivation-course-02-480x298.jpg", alt: "picture teacher with students", price: "$30.00", info: "How to Build Confidence in Your Abilities", lessons: "1", students: "50" },
+                { id: 2, img: "../../../public/img-main-latest-courses/motivation-course-05-480x298.jpg", alt: "picture teacher with students", price: "$30.00", info: "How to Build Confidence in Your Abilities", lessons: "1", students: "50" },
 
-                { id: 3, img: "../../../public/img-main-latest-courses/motivation-course-03-480x298.jpg", alt: "picture another 2 man with pc", price: "$20.00", info: "Productivity Machine - Focus in a Distracted World", lessons: "5", students: "50" },
+                { id: 3, img: "../../../public/img-main-latest-courses/motivation-course-04-480x298.jpg", alt: "picture another 2 man with pc", price: "$20.00", info: "Productivity Machine - Focus in a Distracted World", lessons: "5", students: "50" },
 
-                { id: 4, img: "../../../public/img-main-latest-courses/motivation-course-04-480x298.jpg", alt: "man with pc", price: "$20.00", info: "Effective Time Management Mastery - Complete Guide", lessons: "18", students: "50" },
+                { id: 4, img: "../../../public/img-main-latest-courses/motivation-course-03-480x298.jpg", alt: "man with pc", price: "$20.00", info: "Effective Time Management Mastery - Complete Guide", lessons: "18", students: "50" },
 
-                { id: 5, img: "../../../public/img-main-latest-courses/motivation-course-05-480x298.jpg", alt: "picture alphaman drinking", price: "$25.99", info: "Body Language Secrets for Entrepreneurs", lessons: "18", students: "50" },
+                { id: 5, img: "../../../public/img-main-latest-courses/motivation-course-02-480x298.jpg", alt: "picture alphaman drinking", price: "$25.99", info: "Body Language Secrets for Entrepreneurs", lessons: "18", students: "50" },
 
-                { id: 6, img: "../../../public/img-main-latest-courses/motivation-course-06-480x298.jpg", alt: "picture alphaman calling", price: "$19.99", info: "Management Skills: The Science od Leadership", lessons: "17", students: "50" }],
+                { id: 6, img: "../../../public/img-main-latest-courses/motivation-course-01-480x298.jpg", alt: "picture alphaman calling", price: "$19.99", info: "Management Skills: The Science od Leadership", lessons: "17", students: "50" }],
             // array per la lista delle opportunità AppStoreBooks
             opportunityList: [
                 'Help you understand yourself better',
@@ -39,7 +39,6 @@ export default {
                 { id: 2, img: '../../../public/img-main-store-book/product-book-10-400x400.jpg', info: "Real man 4.0 by Maxcoach", price: "$39.00" },
             ],
             // Array lista partnes AppStoreBooks
-
             brandPartnersList: [
                 '../../../public/img-main-partners/client-logo-05-primary.png',
                 '../../../public/img-main-partners/client-logo-06-primary.png',
@@ -61,8 +60,11 @@ export default {
             // Array Articles AppBlogUpdate
             articlesInteresting: [
                 { id: 1, title: 'How to Stay True to Your Personal Brand', date: 'May 13,2020', info: 'When it comes to tour business or career, you want...', picture: '../../../public/img-main-interesting-articles/motivation-blog-04-480x325.jpg' },
+
                 { id: 2, title: '5 Vital Lessons in 5 Years of freelancing', date: 'May 13, 2020', info: "Being self-emplayed and working from home, it's easy to get...", picture: '../../../public/img-main-interesting-articles/motivation-blog-03-480x325.jpg' },
+
                 { id: 3, title: '11 Super Useful Tips for Small-Business Owners', date: 'May 13, 2020', info: 'Being a small-business owner poses a ton of challengs. We...', picture: './../../public/img-main-interesting-articles/motivation-blog-02-480x325.jpg' },
+
                 { id: 4, title: 'How to Give Tourself Grace to Start Again', date: 'May 13,2020', info: 'Forgive yourself for bad habits you may have started or...', picture: './../../public/img-main-interesting-articles/motivation-blog-01-480x325.jpg' }
             ]
 
@@ -79,17 +81,16 @@ export default {
 </script>
 <template>
     <main>
-        <section class="my_wrapper d-flex justify-content-center">
+        <section class="my_wrapper d-flex justify-content-center align-items-center">
             <div class="value-course" v-for="statistic in courseStatistics" :key="statistic">
                 <div class="dotted-border">
                     <img class="img-dotted" src="../../assets/img/imagesZip/background-pattern-grid-line-06.png" alt="picture dotted border">
                 </div>
                 <div class="container-value">
-                    <p class="value-date fs-3 text-center">{{ statistic.data }}</p>
+                    <p class="value-date fs-1 fw-bold text-center">{{ statistic.data }}</p>
                     <p class="value-info text-uppercase">{{ statistic.name }}</p>
                 </div>
             </div>
-            <img class="img-dotted" src="../../assets/img/imagesZip/background-pattern-grid-line-06.png" alt="picture dotted border">
         </section>
         <AppAboutMe />
         <AppOnlineCourses :latestCorses="latestCorses" />
@@ -108,7 +109,7 @@ section.my_wrapper {
     margin-bottom: 8rem;
 
     div.dotted-border {
-        width: 50%;
+        width: 100%;
         height: 100%;
 
         img.img-dotted {
@@ -119,6 +120,7 @@ section.my_wrapper {
 
     div.value-course {
         position: relative;
+        width: 400px;
 
         div.container-value {
             position: absolute;

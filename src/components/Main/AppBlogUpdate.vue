@@ -14,7 +14,7 @@ export default {
     },
 }
 </script>
-<template lang="">
+<template>
     <section class="my_wrapper">
         <h1 class="fs-6 mb-5 text-uppercase">Blog Updated</h1>
         <p class="text-courses mb-5">
@@ -36,7 +36,6 @@ export default {
             <span class="view-all-posts text-uppercase" href="">view all posts</span>
         </div>
     </section>
-
 </template>
 <style lang="scss" scoped>
 @use '../../style/partials/mixins' as*;
@@ -48,7 +47,7 @@ section.my_wrapper {
 
     p.text-courses {
         @include font(font-family);
-        font-size: 3.3rem;
+        font-size: 3rem;
     }
 
     h5.my_title {

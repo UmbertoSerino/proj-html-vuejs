@@ -35,7 +35,6 @@ export default {
                         <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
-
                 <div class="col-md-3">
                     <h1 h1 class="fs-5">Explore</h1>
                     <div class="d-flex flex-column flex-wrap explore">
@@ -66,7 +65,8 @@ export default {
         <section class="copryright">
             <p class="m-0 py-5 text-center">2020 Maxcoach. All Right Reserved</p>
             <a class="page-scroll-up">
-                <i class="fa-solid fa-arrow-up"></i> </a>
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
         </section>
     </footer>
 </template>
@@ -94,11 +94,11 @@ footer {
 
     a.page-scroll-up {
         background-color: $color-2;
+        color: white;
         position: fixed;
         right: 30px;
         bottom: 60px;
         z-index: 1;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         display: block;
         padding: 0;
         width: 60px;

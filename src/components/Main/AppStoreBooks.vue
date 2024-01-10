@@ -35,12 +35,12 @@ export default {
                     <li class="mb-2" v-for="opportunity in opportunityList" :key="opportunity">
                         <i class="color-2 fa-solid fa-check"></i>  {{ opportunity }}
                     </li>
+                    <div class="pt-3">
+                        <button class="started-button">
+                            Get Free Ebooks
+                        </button>
+                    </div>
                 </ul>
-                <div>
-                    <button class="started-button">
-                        Get Free Ebooks
-                    </button>
-                </div>
             </div>
             <!-- shop books -->
             <div class="col-7 d-flex">

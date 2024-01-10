@@ -21,7 +21,7 @@ export default {
             </div>
         </div>
         <div class="row">
-            <div class="col-6 position-relative mb-5">
+            <div class="col-7 position-relative">
                 <img class="img-video" src="../../assets/img/imagesZip/img-main-aboutme/home-movation-video-poster-670x450.jpg" alt="alphaman picture">
                 <img class="logo-youtube" src="../../assets/img/imagesZip/img-main-aboutme/icon-youtube-play.png" alt="">
             </div>
@@ -59,7 +59,6 @@ section.my_wrapper {
         color: $color-2
     }
 
-    ;
 
     div.info {
         padding: 2.3rem 0 0 3rem;
@@ -76,7 +75,7 @@ section.my_wrapper {
     }
 
     p.my_font-3 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     h3.my_font {

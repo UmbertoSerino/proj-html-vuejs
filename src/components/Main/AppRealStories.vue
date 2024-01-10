@@ -26,7 +26,7 @@ export default {
     <section class="my_wrapper-real-stories my_background position-relative">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 my_background">
+                <div class="col-md-6">
                     <div class="container-testimonials text-center">
                         <h1 class="color-2 fs-6 fw-bold mb-5 text-uppercase">real stories</h1>
                         <p class="testimonial-info">{{ testimonials[activeIndex].info }}</p>
@@ -80,7 +80,7 @@ section.my_wrapper-real-stories {
 
 div.container-testimonials {
     padding-top: 5rem;
-    width: 100%;
+    width: 60%;
     max-width: 800px;
     margin: 0 auto;
 
@@ -89,8 +89,8 @@ div.container-testimonials {
     }
 
     p.testimonial-info {
-        @include font (font-family);
-        font-size: 1.7rem;
+        font-size: 1.44rem;
+        line-height: 1.9rem;
         margin-bottom: 3rem
     }
 
