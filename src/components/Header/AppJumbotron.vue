@@ -78,6 +78,14 @@ h3.my_font {
 
 button.started-button {
     @include button-green(background-color, color, padding);
+    transition: 1s ease-in-out;
+
+
+}
+
+button:hover {
+    background-color: $color-3;
+    transition: 1s ease-in-out;
 }
 
 div.shop {

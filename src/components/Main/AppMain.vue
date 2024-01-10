@@ -79,12 +79,18 @@ export default {
 </script>
 <template>
     <main>
-        <div class="my_wrapper d-flex justify-content-center">
-            <section class="value-course mx-5" v-for="statistic in courseStatistics" :key="statistic">
-                <p class="value-date fs-3 text-center">{{ statistic.data }}</p>
-                <p class="value-info text-uppercase">{{ statistic.name }}</p>
-            </section>
-        </div>
+        <section class="my_wrapper d-flex justify-content-center">
+            <div class="value-course" v-for="statistic in courseStatistics" :key="statistic">
+                <div class="dotted-border">
+                    <img class="img-dotted" src="../../assets/img/imagesZip/background-pattern-grid-line-06.png" alt="picture dotted border">
+                </div>
+                <div class="container-value">
+                    <p class="value-date fs-3 text-center">{{ statistic.data }}</p>
+                    <p class="value-info text-uppercase">{{ statistic.name }}</p>
+                </div>
+            </div>
+            <img class="img-dotted" src="../../assets/img/imagesZip/background-pattern-grid-line-06.png" alt="picture dotted border">
+        </section>
         <AppAboutMe />
         <AppOnlineCourses :latestCorses="latestCorses" />
         <AppStoreBooks :booksShop="booksShop" :opportunityList="opportunityList" :brandPartnersList="brandPartnersList" />
@@ -96,11 +102,30 @@ export default {
 @use '../../style/partials/mixins' as*;
 @use '../../style/partials/variables' as*;
 
-div.my_wrapper {
+section.my_wrapper {
     @include container (width, margin);
+    margin: 0 auto;
     margin-bottom: 3rem;
 
-    section.value-course {
+    div.dotted-border {
+        width: 50%;
+        height: 100%;
+
+        img.img-dotted {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    div.value-course {
+        position: relative;
+
+        div.container-value {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         .value-date {
             color: $color-2
