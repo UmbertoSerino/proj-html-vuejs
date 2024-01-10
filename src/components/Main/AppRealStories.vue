@@ -78,7 +78,8 @@ section.my_wrapper-real-stories {
 
 div.container-testimonials {
     padding-top: 5rem;
-    width: 50%;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
 
     .color-2 {

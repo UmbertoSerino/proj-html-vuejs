@@ -14,10 +14,10 @@ export default {
 </script>
 <template>
     <footer class="">
-        <section class="my_wrapper">
+        <section class="my_wrapper text-white pt-5 pb-5">
             <div class="row">
                 <div class="col-6" v-for="info in Address" :key="info">
-                    <h1>Address</h1>
+                    <h1 class="fs-5 mb-4">Address</h1>
                     <p>
                         {{ info.street }}
                     </p>
@@ -27,8 +27,44 @@ export default {
                     <p>
                         {{ info.mail }}
                     </p>
+                    <div class="reference-footer">
+                        <!-- icon per l'indirizzamento ai profili social -->
+                        <a href="https://twitter.com/?lang=it"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/?locale=it_IT"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h1 h1 class="fs-5">Explore</h1>
+                    <div class="d-flex flex-column flex-wrap explore">
+                        <div v-for="explore in explore" :key="explore">
+                            <ul class="p-0">
+                                <li>
+                                    {{ explore }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h1 class="fs-5">Information</h1>
+                    <div v-for="info in information " :key="info">
+                        <div>
+                            <ul class="p-0">
+                                <li>
+                                    {{ info }}
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+        </section>
+        <section class="copryright">
+            <p class="m-0 py-5 text-center">2020 Maxcoach. All Right Reserved</p>
         </section>
     </footer>
 </template>
@@ -38,10 +74,30 @@ export default {
 
 footer {
     background-color: $color-9;
-    height: 500px;
+
+    div.explore {
+        height: 150px
+    }
 
     section.my_wrapper {
         @include container (width, margin);
+    }
+
+    p,
+    li {
+        color: rgb(160, 160, 160);
+        font-weight: 700;
+        font-size: .9rem
+    }
+
+
+    div.reference-footer {
+
+        a {
+            margin-right: 2rem;
+            font-size: 1.7rem;
+            color: $color-7;
+        }
     }
 }
 </style>
