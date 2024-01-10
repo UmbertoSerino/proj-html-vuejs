@@ -27,10 +27,12 @@ export default {
         <div class="row">
             <div class="col-6 my_background text-center">
                 <h1>real stories</h1>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus id incidunt, iusto perferendis libero, vel alias consequatur exercitationem odit
-                    excepturi minus, sequi accusamus vitae officiis. Vel vitae excepturi fugit? </p>
+                <p>{{ testimonials[activeIndex].info }}</p>
                 <div class="picture-testimonails">
                     <img :src="testimonials[activeIndex].img" alt="" />
+                </div>
+                <div>
+                    <span>{{ testimonials[activeIndex].work }}</span>
                 </div>
             </div>
             <div class="col-6 p-0">
@@ -38,11 +40,11 @@ export default {
             </div>
         </div>
         <div class="carousel-control">
-            <div class="text-center p-0 arrow-up">
-                <img src="../../assets/img/imagesZip/img-header/image.png" alt="arrow-up" @click="prevTestimonial">
+            <div class="text-center p-0 arrow-up" @click="prevTestimonial">
+                <img src=" ../../assets/img/imagesZip/img-header/image.png" alt="arrow-up">
             </div>
-            <div class="text-center">
-                <span></span>
+            <div class=" text-center">
+                <span>{{ activeIndex + 1 }}/{{ testimonials.length }}</span>
             </div>
             <div class="text-center arrow-down" @click="nextTestimonial">
                 <img src="../../assets/img/imagesZip/img-header/image (1).png" alt="arrow-down">
